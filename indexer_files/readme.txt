@@ -1,0 +1,1 @@
+Unzip the Indexer file then upload the index.php file and the folder to your root directory for the class.  Edit line 5 and replace Rick Anderson with their name

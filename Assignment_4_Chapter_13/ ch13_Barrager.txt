@@ -1,0 +1,18 @@
+Web 250
+Chapter 13 -- Functions
+Assignment 4
+Dane Barrager
+
+The solution to the Chapter 13 Part 1 exercise can be found at:
+
+http://squiggleit.net/chapter_13/Part_1/index.php
+
+The solution to the Chapter 13 Part 2 exercise can be found at:
+
+http://squiggleit.net/chapter_13/Part_2/index.php
+
+The solution to the Chapter 13 Part 3 exercise can be found at:
+
+http://squiggleit.net/chapter_13/Part_3/login.php
+
+

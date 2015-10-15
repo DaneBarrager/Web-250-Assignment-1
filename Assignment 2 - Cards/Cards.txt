@@ -1,0 +1,19 @@
+Web 250
+Chapter 13 -- Functions
+Assignment 2
+Dane Barrager
+
+The solution to the cards exercise can be found at:
+
+http://ec2-54-157-228-196.compute-1.amazonaws.com/cards/index.php
+
+I am working on setting up the correct IP address and domain name.  It usually takes a day or two to propagate.
+
+Notes:
+
+I got the exercise working but only with a couple of kludges.
+
+I was able to load functions from an external file, then execute those functions from a 3rd external file.
+
+But what I couldn't figure out was how to properly call one page to another page.  I was forced to use links (The <a> tag.  Then I had to reload the link to the external function file.   I styled the links to look like buttons, which I think looks better.
+

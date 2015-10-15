@@ -1,0 +1,20 @@
+Web 250
+Chapter 6
+Assignment 5
+Dane Barrager
+
+The solution to the Chapter 6 Parts 1, 2, & 3 exercises can all be found at:
+
+http://squiggleit.net/manage_products/index.php
+
+I enhanced Part 3 by adding the following functions:
+
+1. Add Customer
+2. Delete Customer
+
+So full Find, Edit, Add, Delete functions are implemented.
+
+I added 2 other capabilities to the Find function:
+
+3. Change the select statement to a LIKE, so you can find a customer just by typing in the 1st part of the name, not the whole name.  If the LIKE query returns no values, then an error is displayed.
+4. If no name is entered in the Find box, the Select query returns all customers.

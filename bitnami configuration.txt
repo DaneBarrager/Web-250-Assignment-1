@@ -1,0 +1,142 @@
+AWS Server Cheat Sheet
+
+
+This is specifically for an Ubuntu server, but other Linux variations would be very similar.  A basic understanding of Linux is assumed.
+
+I like the Bitnami LAMP configurations.  They are preloaded with all of the necessary software and have excellent documentation.  They have free tiers available on AWS.  Where the Bitnami configuration differs from the standard Ubuntu load, the differences are noted.
+
+Items with angled brackets "<>" are to be filled out by you.
+
+To login to Ubuntu server using ssh:
+
+ssh -i <path to key file on local machine>/.<key file name>.pem ubuntu@<IP address of AWS server>
+
+for Bitnami servers it is:
+
+ssh  -i /Users/dane_barrager/Dropbox/nginx_082212.pem bitnami:e1ZBrGjTqHT1@54.221.204.30
+
+
+Login:
+
+Bitnami:
+
+Old Password:   EJz0rKK3oMXh
+
+New Password:   e1ZBrGjTqHT1
+
+IP:   54.221.204.30
+
+
+mySQL
+
+mysql -u mysql -p
+
+
+To set root password:
+
+cd /opt/bitnami/mysql
+sudo ./bnconfig --userpassword mypassword
+
+
+root password:
+
+mySQLWeb250
+
+
+To change a password for mysql:
+
+UPDATE mysql.user SET Password=PASSWORD('mysql') WHERE User='mysql';
+FLUSH PRIVILEGES;
+
+SFTP:
+
+sftp://bitnami:e1ZBrGjTqHT1@54.157.228.196:22
+
+
+To install mysql:
+
+sudo apt-get install mysql-server
+
+Root Password:
+
+host:
+
+mySQLWeb250
+
+local password:
+
+password
+
+
+to check if mysql is running:
+
+sudo netstat -tap | grep mysql
+login to mysql
+mysql -u root -p
+
+ http://23.21.192.247/phpmyadmin
+
+to start or stop mysql:
+
+sudo service mysql restart
+sudo service mysql stop
+sudo service mysql start
+
+
+SQL Status and start:
+
+sudo /opt/bitnami/ctlscript.sh status
+sudo /opt/bitnami/ctlscript.sh start mysql
+sudo /opt/bitnami/ctlscript.sh restart mysql
+
+
+To open SSH tunnel to SQL server:
+
+ssh -N -L 8888:127.0.0.1:80 -i /Users/dane_barrager/Dropbox/nginx_082212.pem bitnami:e1ZBrGjTqHT1@54.221.204.30
+
+To connect via PHP when tunnel is open:
+
+http://127.0.0.1:8888/phpmyadmin/
+
+or
+
+http://127.0.0.1:3307/phpmyadmin/
+
+Installation Directory:
+
+/opt/bitnami/mysql
+
+To change root password
+
+/opt/bitnami/mysql/bin/mysqladmin -p -u root password <your_new_password>
+
+
+MySQL Logon:
+
+mysql
+
+
+Apache:
+
+How to restart apache server:
+
+sudo /usr/sbin/apachectl restart
+http://localhost/~dane_barrager/
+
+
+MySQL Users:
+
+-- create the users and grant priveleges to those users
+GRANT SELECT, INSERT, DELETE, UPDATE
+ON my_guitar_shop1.*
+TO mgs_user@localhost
+IDENTIFIED BY 'pa55word';
+GRANT SELECT
+ON products
+TO mgs_tester@localhost
+IDENTIFIED BY 'pa55word';
+
+Same for my_guitar_shop2
+
+
+
